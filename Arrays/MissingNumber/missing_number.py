@@ -1,7 +1,25 @@
 # 268. Missing Number
 # Gauss formula n(n + 1) / 2
 
-""" Solution 1 (sorting)
+""" Solution 1: Brute force
+    Time Complexity: O(n^2). The outer loop runs n times, and the in operator takes O(n) time 
+                     to scan the list for each iteration.
+    Space Complexity: O(1)
+"""
+def missingNumber(nums):
+    n = len(nums)
+    
+    # Check every number from 0 to n
+    # for i in range(n)
+    for i in range(n + 1):
+        # If the number isn't in our array, we found it
+        if i not in nums:
+            return i
+    # if not found
+    # return n
+
+
+""" Solution 2 (sorting)
     1) Sort the list (ascending order)
     2) Iterate through the sorted list
         3) Use the index as the expected number and compare to the current number
@@ -26,7 +44,7 @@ def find_missing_number_sorted(nums):
             return i
     return n
         
-""" Solution 2 (Gauss's Formula)
+""" Solution 3 (Gauss's Formula)
 
     1) Compute the sum of all elements expect to be present(0 + 1 + 2 + ... + N)
     2) Compute the actual sum of the given input
@@ -53,7 +71,7 @@ def find_missing_num_formula(nums):
     return expected_sum - actual_sum
             
 
-""" Solution 3 (XOR bitwise operator)
+""" Solution 4 (XOR bitwise operator)
     1) XOR all numbers from 0 to n (complete expected range)
        len(nums) + 1 to include all expected numbers
        
@@ -76,7 +94,7 @@ def find_missing_num_xor(nums):
     return res
 
 
-""" Solution 4: XOR indices and values in one loop
+""" Solution 5: XOR indices and values in one loop
     This technique leverages the commutative and associative properties of the XOR operation.
     Because the order doesn't matter, performing res = (res ^ i) ^ arr[i] is mathematically 
     equivalent to XORing all indices first and then all values. 
@@ -95,7 +113,7 @@ def find_missing_number_optimized(nums):
     return res
 
 if __name__ == "__main__":
-    arr = [3, 0, 1]
+    arr = [0, 1]
     # arr = [1, 2, 4, 5] 
     
     print(find_missing_number_optimized(arr))
