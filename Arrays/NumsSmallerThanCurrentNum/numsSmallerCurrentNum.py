@@ -19,11 +19,13 @@ def smallerNumbersThanCurrent(arr):
 
 
 ''' Solution 2: Sorting
+    Pattern: This problem maps to Counting / Sorting
     Time Complexity: O(N log N) due to sorting
     Space Complexity: O(N) for the sorted array and the result array
 '''
 def smallerNumbersThanCurrent(arr):
     # Sort the numbers to easily find positions
+    # After sorting, the index of each element represents the count of smaller elements
     sorted_nums = sorted(arr)
     #  0  1  2  3  4  -> indices
     # [1, 2, 2, 3, 8]
