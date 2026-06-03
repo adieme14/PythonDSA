@@ -18,7 +18,8 @@ def contains_duplicate(arr):
 # The {} Trap: Do not use my_set = {}. 
 # In Python, empty curly braces create an empty dictionary, not a set (unless you add values).
 # Time complexity: O(n)
-# Space complexit: for storing elements in a set
+# Space complexity: O(n) — Creating the set always allocates memory proportional to the number 
+# of unique elements. (i.e, for storing elements in a set)
 
 def containDuplicate(arr):
     # if len(arr) == len(set(arr)):
