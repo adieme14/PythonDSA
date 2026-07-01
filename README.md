@@ -1,3 +1,7 @@
+# Algorithm:
+- A step by step procedures for solving a (computational) problem
+
+
 # Fast Lookup, Counting, or Grouping
 
 ### A hash table is a good fit when the problem needs one of these:
