@@ -1,5 +1,7 @@
 ''' Leetcode 448: Find All Numbers Disappeared in an Array
-    Solution 1: Brute force solution   
+    Solution 1: Brute force solution
+    Time Complexity: O(n) - We traverse the list twice, but it's still linear time.
+    Space Complexity: O(n) - We use a set to store the numbers present in the   
 '''
 
 def findDisappearedNumbers(nums):
@@ -23,6 +25,9 @@ def findDisappearedNumbers(nums):
     - The subtraction operation finds the difference between these two sets, 
     effectively identifying the missing numbers.
     - Finally, we convert the resulting set back to a list and return it.
+    
+    Time Complexity: O(n) - We traverse the list twice, but it's still linear time.
+    Space Complexity: O(n) - We use a set to store the numbers present in the
 """    
 
 def findDisappearedNumbers2(nums):
