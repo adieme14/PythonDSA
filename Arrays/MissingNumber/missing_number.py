@@ -16,7 +16,7 @@ def missingNumber(nums):
         if i not in nums:
             return i
     # if not found
-    # return n
+    return n
 
 
 """ Solution 2 (sorting)
@@ -116,5 +116,5 @@ if __name__ == "__main__":
     arr = [0, 1]
     # arr = [1, 2, 4, 5] 
     
-    print(find_missing_number_optimized(arr))
+    print(find_missing_number_optimized(arr)) 
    
