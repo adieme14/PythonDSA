@@ -49,6 +49,7 @@ def findDisappearedNumbers2(nums):
 
 def find_disappeared_numbers(nums):
     # Step 1: Mark presence by negating values at corresponding indices
+
     for num in nums:
         # Use abs() because the value might have been negated already
         index = abs(num) - 1

@@ -49,7 +49,7 @@ def containDuplicate(arr):
     If you cannot use extra memory (O(1) auxiliary space), sort the list first. 
     Sorting groups identical numbers together, meaning you only need to check adjacent positions.
     Time Complexity: O(nlog n) — Timsort (Python's built-in sorting algorithm) dictates the speed.
-    Space Complexity: O(1) — Modifies the input array directly without adding extra data structures.
+    Space Complexity: O(1) — Modifies the input array directly without adding extra data structures. 
 """
 
 def containsDuplicateSorted(nums):
