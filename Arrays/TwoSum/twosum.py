@@ -1,5 +1,4 @@
-'''
-    Solution 1: Brute Force 
+''' Solution 1: Brute Force 
     Time complexity: O(n^2) 
     Space complexity: would be O(1) because we are always returning either 
     an array of two elements or an empty array, basically fixed-size data structures
@@ -15,10 +14,19 @@ def two_sum_brute_force(nums, target):
                 return [i, j]
     return []  # Return empty if no solution is found
 
-"""
-    Solution 2: Hash Map (Complement)
+
+""" Solution 2: Hash Map (Complement)
     Time complexity: O(n)   
     Space complexity: O(n) because in the worst case, we might store all n elements in the hash map
+    
+    Current number
+        ↓
+    target - current
+        ↓
+    Have I seen that number?
+        ↓
+    Yes → return indices
+    No  → store current number
 """
 
 def two_sum_complement(nums, target):
